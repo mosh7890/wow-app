@@ -1,8 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
+import WebFont from "webfontloader";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+WebFont.load({
+  google: {
+    families: ["Oswald", "sans-serif"]
+  }
+});
+
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
