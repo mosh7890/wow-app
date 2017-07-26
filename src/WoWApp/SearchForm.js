@@ -16,7 +16,7 @@ class SearchForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let self = this;
-    let char = this.state.charName;
+    let char = this.state.charName.toLowerCase();
     let url = `https://eu.api.battle.net/wow/character/${realm}/${char}?locale=en_GB&apikey=${apiKey}`;
     axios
       .get(url)

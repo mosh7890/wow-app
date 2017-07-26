@@ -1,4 +1,6 @@
 import React from "react";
+// import { browserHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () =>
   <div className="container-fluid">
@@ -7,29 +9,36 @@ const NavBar = () =>
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li>
-              <a href="">
-                Home<span
-                  className="glyphicon glyphicon-home"
-                  aria-hidden="true"
-                />
-              </a>
+              <Link to="/">
+                Home{" "}
+                <span className="glyphicon glyphicon-home" aria-hidden="true" />
+              </Link>
             </li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="">
-                <span className="glyphicon glyphicon-user" /> Register
-              </a>
+              <Link to="/Register">
+                Register{" "}
+                <span className="glyphicon glyphicon-user" aria-hidden="true" />
+              </Link>
             </li>
             <li>
-              <a href="">
-                <span className="glyphicon glyphicon-log-in" /> Login
-              </a>
+              <Link to="/">
+                Login{" "}
+                <span
+                  className="glyphicon glyphicon-log-in"
+                  aria-hidden="true"
+                />
+              </Link>
             </li>
             <li>
-              <a href="">
-                <span className="glyphicon glyphicon-log-out" /> Logout
-              </a>
+              <Link to="/">
+                Logout{" "}
+                <span
+                  className="glyphicon glyphicon-log-out"
+                  aria-hidden="true"
+                />
+              </Link>
             </li>
           </ul>
         </div>
